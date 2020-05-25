@@ -1,0 +1,22 @@
+一. obj2gltf——Obj模型转Gltf
+npm安装： npm install -g obj2gltf
+git查看地址：https://github.com/CesiumGS/obj2gltf.git
+	// 全局安装后
+             obj文件所在目录                                                   输出目录 
+
+ obj2gltf  -i ./要转化的文件的目录地址.obj -o ./转化后的文件的目录地址.gltf
+ obj2gltf  -i ./要转化的文件.obj -o ./转化后的文件的目录地址.gltf --unlit --separate
+（--unlit的作用是可以保留环境贴图的效果）
+  (--separate是将贴图文件提取出来，提出来浏览器可以缓存，
+  如果你需要继续压缩gltf文件，这里不加这个参数也行，因为压缩的时候也能提出来)
+
+二. gltf-pipeline
+npm安装：npm install -g gltf-pipeline
+git地址：https://github.com/CesiumGS/gltf-pipeline.git
+
+在上述操作后进行如下操作可以再次进行压缩
+
+gltf-pipeline -i model/文件名.gltf -o modelDraco.gltf -d
+
+
+这样操作后便可以得到最大压缩obj的文件了
