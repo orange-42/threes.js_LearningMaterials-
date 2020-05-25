@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Three.js-webgl物联网粮仓3D可视化</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: rgb(1, 3, 28);
+        }
+
+        #tan {
+            position: absolute;
+            color: #fff;
+            z-index: 102;
+            font-size: 16px;
+        }
+
+        #tan0 {
+            position: absolute;
+            color: #fff;
+            background: rgba(2, 4, 27, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #00aeef;
+            z-index: 102;
+            width: 180px;
+            font-size: 16px;
+        }
+
+        #tan0>div {
+            padding: 5px;
+        }
+
+        #left {
+            position: absolute;
+            z-index: 200;
+            width: 150px;
+            background: rgba(255, 255, 255, 1.0);
+            padding: 15px;
+            height: 100%;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.min.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/controls/OrbitControls.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/loaders/OBJLoader.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/threejs/examples/js/loaders/MTLLoader.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/renderers/CSS2DRenderer.js"></script>
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/postprocessing/EffectComposer.js"></script>
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/postprocessing/RenderPass.js"></script>
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/postprocessing/ShaderPass.js"></script>
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/shaders/CopyShader.js"></script>
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/postprocessing/OutlinePass.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/js/vue@2.5.16.min.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/js/element-ui/index.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/GLTFLoader.js"></script>
+    <script src="js/DRACOLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/FontLoader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/CanvasRenderer.js"></script>
+    <script type="text/javascript" src="js/Projector.js"></script>
+    <script type="text/javascript" src="js/stats.min.js"></script>
+    <link rel="stylesheet" href="http://www.yanhuangxueyuan.com/js/element-ui/index.css">
+    <script type="text/javascript"
+        src="http://www.yanhuangxueyuan.com/versions/threejsR92/examples/js/shaders/FXAAShader.js"></script>
+</head>
+
+<body>
+    <div id="onGeometry" style="width:500px; height: 500px;"></div>
+    <div id="label3" style="visibility:hidden">
+        <div style="position:relative;">
+            <div style="position: absolute;top:-120px;left:55px;width:100px;color:#ffffff;">
+            </div>
+        </div>
+    </div>
+    <div id="app">
+        <div style="position: absolute;left: 25px;top: 50px;" id="prent">
+
+        </div>
+        <div v-cloak id="tan" style="width:500px;height:400px;" ref="tan" :style="{left:left + 'px',top:top + 'px'}"
+            v-show="bool">
+            <div style="position:relative;">
+                <div style="position: absolute;left: 0px;top: 0px;">
+                    <img src="UI图/显示面板/2.png" alt="" style="width:400px;opacity: 1.0;">
+                </div>
+                <div style="position:absolute;left:25px;top:40px;font-size:16px">{{ currentMesh.name }}</div>
+                <div style="position:absolute;left:290px;top:25px">
+                    <img src="UI图/显示面板/2.png" alt="" style="width:50px;">
+                </div>
+                <div style="position:absolute;left:330px;top:40px">
+                    {{ currentMesh.温度 }} ℃</div>
+                <div style="position:absolute;left:170px;top:50px">{{ currentMesh.谷物 }}</div>
+                <div style="position:absolute;left:80px;top:85px;font-size:60px;color:#00ffff;vertical-align:middle">
+                    <img :src="currentMesh.iconpath" alt="" style="width:60px;">
+                </div>
+                <div style="position:absolute;left:155px;top:80px;font-size:60px;color:#00ffff;vertical-align:middle">
+                    {{ Math.floor(S) }}</div>
+                <div
+                    style="position:absolute;left:70px;top:170px;padding:8px 25px;border-radius:30px;border:1px solid #00ffff;">
+                    使用次数 — {{ currentMesh.仓高 }} 次</div>
+                <!-- <div style="position:absolute;left:225px;top:170px;padding:8px 25px;">實際高度—{{ currentMesh.粮高 }} </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        var scene = new THREE.Scene();
+        // var textureLoader = new THREE.TextureLoader();
+        // var texture = textureLoader.load('./贴图/背景/0.jpg');
+        // scene.background = texture;
+        var group1 = new THREE.Group();
+        var group2 = new THREE.Group();
+        var group3 = new THREE.Group();
+        group1.position.set(-40, 0, -105);
+        group2.position.set(-40, 0, -25);
+        group3.position.set(+10, 0, -85);
+        var AllGroup = new THREE.Group();
+        AllGroup.add(group1, group2, group3);
+        scene.add(AllGroup);
+        var treeData = [{
+            id: group1.id,
+            label: '立筒仓',
+            children: [],
+        }, {
+            id: group1.id,
+            label: '浅圆仓',
+            children: [],
+        }, {
+            id: group1.id,
+            label: '平房仓',
+            children: [],
+        }, ];
+        var OBJLoader = new THREE.OBJLoader();
+        var mtlLoader = new THREE.MTLLoader();
+        var GLTFLoaders = new THREE.GLTFLoader();
+        var fontLoader = new THREE.FontLoader();
+
+
+        // wall
+        OBJLoader.load('UI图/wall.obj', function (obj) { //底部的墙
+        });
+
+
+        var onProgress = function (xhr) {
+            console.log(xhr, 'xhr')
+            if (xhr.lengthComputable) {
+                var percentComplete = (xhr.loaded / xhr.total) * 100;
+                console.log(Math.round(percentComplete, 2) + "% downloaded");
+            }
+        };
+
+        var onError = function () {
+            // 载入出错时候
+        };
+        initText()
+
+        var loader = new THREE.GLTFLoader();
+        // 这个是Threejs解析draco压缩之后的解析器 
+        // 它从这里读取解析器JS
+        THREE.DRACOLoader.setDecoderPath("js/draco/gltf/");
+        // 将Draco解析器和GltfLoader绑定在一起
+        mtlLoader.load('UI图/最终模型/T1.mtl', function (materials) {
+
+                materials.preload();
+                loader.setDRACOLoader(new THREE.DRACOLoader());
+                loader.load(
+                    "UI图/最终模型/T1Draco.gltf",
+                    function (gltf) {
+                        // document.getElementById("prent").innerHTML = '已加载完毕!'
+
+                        console.log(gltf.scene, 'gltfgltf')
+                        gltf.scene.scale.set(10, 10, 10);
+                        var mesh = gltf.scene;
+                        mesh.material = new THREE.MeshBasicMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/T1.mtl'),
+                            side: THREE.DoubleSide,
+                            transparent: false,
+                            clipIntersection: true,
+                        });
+                        mesh.translateZ(170); //打开时离z轴的移动距离
+                        mesh.translateX(-100); //打开时离x轴的移动距离
+                        mesh.translateY(0); //打开时离x轴的移动距离
+
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({ // 用于光亮表面的材质
+                            map: new THREE.TextureLoader().load('UI图/最终模型/T1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                        });
+                        Mesh.编号 = "B-" + (0 + 1) * (1 + 1);
+                        Mesh.name = "充电站-" + (0 + 1) * (1 + 1);
+                        Mesh.translateX(1 * 26); // 立筒仓的上下间隙
+                        Mesh.translateZ(1 * 21); // 立筒仓的左右间隙
+                        Mesh.rotateY(Math.PI / 2);
+                        group1.add(Mesh);
+                        Mesh.仓高 = 36;
+                        Mesh.粮高 = (15 * Math.random() + 20).toFixed(1);
+                        Mesh.谷物 = '充电站';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 200;
+                        Mesh.iconpath = "UI图/building.png";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group1.add(label);
+                        treeData[0].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    });
+            },
+            onProgress,
+            onError
+        );
+        // 受电柜
+        mtlLoader.load('UI图/最终模型/直流终端1.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/直流终端1Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(15, 15, 15);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(-97);
+                    mesh.translateZ(-85);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 7; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "E-" + (1 + 1) * (j + 1);
+                        Mesh.name = "充电桩 E-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(1 * 15); //上下的距离间隙
+                        Mesh.translateZ(j * 25); // 左右间隙
+                        Mesh.rotateY(Math.PI / 2);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '充电桩';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        // 充电桩
+        mtlLoader.load('UI图/最终模型/直流终端1.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/直流终端1Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(15, 15, 15);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(150);
+                    mesh.translateZ(90);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 1; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "E-" + (1 + 1) * (j + 1);
+                        Mesh.name = "充电桩 E-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(1 * 15); //上下的距离间隙
+                        Mesh.translateZ(j * 15); // 左右间隙
+                        Mesh.rotateY(-Math.PI / 2);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '充电桩';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        // 门口的电桩
+        // 充电桩
+        mtlLoader.load('UI图/最终模型/直流终端1.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/直流终端1Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(15, 15, 15);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(30);
+                    mesh.translateZ(130);
+
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 2; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/直流终端1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "E-" + (1 + 1) * (j + 1);
+                        Mesh.name = "充电桩 E-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(j * 35); //上下的距离间隙
+                        Mesh.translateZ(1 * 15); // 左右间隙
+                        Mesh.rotateY(-Math.PI / 1);
+                        group2.add(Mesh);
+                        initContent();
+                        animate();
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '充电桩';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+
+        });
+        // 白车靠近门的
+        mtlLoader.load('UI图/最终模型/公交02.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/公交02Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(6, 6, 6);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/公交02.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(40);
+                    mesh.translateZ(160);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 1; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/公交02.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "N-" + (1 + 1) * (j + 1);
+                        Mesh.name = "公交车2 N-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(j * 35); //上下的距离间隙
+                        Mesh.translateZ(1 * 15); // 左右间隙
+                        Mesh.rotateY(-Math.PI / 1);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '公交车2';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        // 公交黄车1 靠近7个桩的
+        mtlLoader.load('UI图/最终模型/公交1.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/公交1Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(6, 6, 6);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/公交1.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(-16);
+                    mesh.translateZ(13);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 1; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/公交1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "N-" + (1 + 1) * (j + 1);
+                        Mesh.name = "公交车1 N-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(j * 35); //上下的距离间隙
+                        Mesh.translateZ(1 * 15); // 左右间隙
+                        Mesh.rotateY(Math.PI / 2);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '公交车1';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        // 公交 靠近进门 的
+        mtlLoader.load('UI图/最终模型/公交1.mtl', function (materials) {
+            document.getElementById("prent").innerHTML = '加载中...'
+
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/公交1Draco.gltf",
+                function (gltf) {
+                    document.getElementById("prent").innerHTML = '加载完毕!'
+
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(6, 6, 6);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/公交1.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(100);
+                    mesh.translateZ(50);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 1; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/公交1.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "B-" + (1 + 1) * (j + 1);
+                        Mesh.name = "公交车1 N-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(j * 35); //上下的距离间隙
+                        Mesh.translateZ(1 * 15); // 左右间隙
+                        Mesh.rotateY(-Math.PI / 2);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '公交车1';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        function initText(){
+         fontLoader.load('js/KenPixel_Regular.json',function(response){
+                 var font = response;
+                 var textGeometry = new THREE.TextGeometry("粤DJK4752",{
+                     "font" : font, //字体，默认是'helvetiker'，需对应引用的字体文件
+                     "size" :0.4, //字号大小，一般为大写字母的高度
+                     "height" : 0.2, //文字的厚度
+                     "bevelEnabled" : false, //布尔值，是否使用倒角，意为在边缘处斜切
+                     "bevelSize": 0,  //倒角厚度
+                      weight: 'normal', //值为'normal'或'bold'，表示是否加粗
+                 })
+                 text = new THREE.Mesh(textGeometry,new THREE.MultiMaterial( [
+                     new THREE.MeshPhongMaterial( { color: 0x000099, shading: THREE.FlatShading } ),
+                     new THREE.MeshPhongMaterial( { color: 0x000099, shading: THREE.SmoothShading } )
+                 ] ))
+                 textGeometry.computeBoundingBox();
+                 var centerOffset = -0.5 * (textGeometry.boundingBox.max.x-textGeometry.boundingBox.min.x);
+                 text.position.x = 0;
+                 text.position.y = 20;
+                 text.position.z = 0;
+                 text.translateY(-16.8);
+                    text.translateX(8.6);
+                    text.translateZ(80);
+                //  text.rotateY = -Math.PI
+                //  text.rotateX(-Math.PI/2)
+                //  text.rotateZ(-Math.PI / 2)
+                 text.rotateY(-Math.PI)
+
+
+
+                 scene.add(text);
+             })
+     }
+        // 公交白车靠近7个电桩的
+        mtlLoader.load('UI图/最终模型/公交02.mtl', function (materials) {
+            materials.preload();
+            // GLTFLoaders.setMaterials(materials);
+            loader.setDRACOLoader(new THREE.DRACOLoader());
+            loader.load(
+                "UI图/最终模型/公交02Draco.gltf",
+                function (gltf) {
+                    console.log(gltf.scene, 'gltfgltf')
+                    gltf.scene.scale.set(6, 6, 6);
+                    var mesh = gltf.scene;
+                    mesh.material = new THREE.MeshBasicMaterial({
+                        map: new THREE.TextureLoader().load('UI图/最终模型/公交02.mtl'),
+                        side: THREE.DoubleSide,
+                        transparent: false,
+                        clipIntersection: true,
+                    });
+                    mesh.translateY(0);
+                    mesh.translateX(-109);
+                    mesh.translateZ(-45);
+                    // for (let i = 0; i < 2; i++) {
+                    for (let j = 0; j < 1; j++) {
+                        var Mesh = mesh.clone();
+                        Mesh.material = new THREE.MeshPhongMaterial({
+                            map: new THREE.TextureLoader().load('UI图/最终模型/公交02.mtl'),
+                            transparent: true,
+                            side: THREE.DoubleSide,
+                            clipIntersection: true,
+                        });
+                        Mesh.编号 = "N-" + (1 + 1) * (j + 1);
+                        Mesh.name = "公交车2 N-" + (1 + 1) * (j + 1);
+                        Mesh.translateX(j * 35); //上下的距离间隙
+                        Mesh.translateZ(1 * 15); // 左右间隙
+                        Mesh.rotateY(Math.PI / 2);
+                        group2.add(Mesh);
+                        Mesh.仓高 = 20;
+                        Mesh.粮高 = (10.9 * Math.random() + 9).toFixed(1);
+                        Mesh.谷物 = '公交车2';
+                        Mesh.温度 = (36 * (Math.random() / 10 + 0.9)).toFixed(1);
+                        Mesh.吨位 = Mesh.粮高 * 400;
+                        Mesh.iconpath = "UI图/电.jpg";
+                        var text = document.getElementById('label3').cloneNode(true);
+                        text.style.visibility = "hidden";
+                        text.className = "label";
+                        text.childNodes[1].childNodes[1].textContent = Mesh.name;
+                        var label = new THREE.CSS2DObject(text);
+                        label.position.copy(Mesh.position);
+                        group2.add(label);
+                        treeData[1].children.push({
+                            id: Mesh.id,
+                            mesh: Mesh,
+                            label: Mesh.name,
+                            children: [],
+                        })
+                    }
+                    // }
+                });
+        });
+        var path = "UI图/skybox/";       //设置路径
+        var urls = [
+        path + '远山_RT.jpg',     
+        path + '远山_LF.jpg',
+        path + '远山_UP.jpg',
+        path + '远山_DN.jpg',
+        path + '远山_BK.jpg',
+        path + '远山_FR.jpg'
+            ];
+        var textureCube = new THREE.CubeTextureLoader().load( urls );
+        //添加天空盒子背景图
+        scene.background = textureCube;
+         
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);//添加相机
+            camera.position.z = 5;
+ 
+        var geometry = new THREE.CubeGeometry(1,1,1);
+        var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        var cube = new THREE.Mesh(geometry, material); 
+        scene.add(cube);
+        var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+ 
+        var container=document.getElementById('onGeometry').appendChild(renderer.domElement);
+
+        function initEcharts(){
+          pieChart = echarts.init( $("<canvas width='512' height='512'></canvas>")[0] );
+          option = {
+              color: ['#3398DB'],
+              tooltip : {
+                  trigger: 'axis',
+                  axisPointer : {
+                      type : 'shadow'
+                  }
+              },
+              grid: {
+                  left: '3%',
+                  right: '4%',
+                  bottom: '3%',
+                  containLabel: true
+              },
+              xAxis : [
+                  {
+                      type : 'category',
+                      data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                      axisTick: {
+                          alignWithLabel: true
+                      }
+                  }
+              ],
+              yAxis : [
+                  {
+                      type : 'value'
+                  }
+              ],
+              series : [
+                  {
+                      name:'直接访问',
+                      type:'bar',
+                      barWidth: '60%',
+                      data:[10, 52, 200, 334, 390, 330, 220]
+                  }
+              ]
+          };
+          pieChart.setOption(option);
+
+          pieChart.on('finished', function () {
+            var infoEchart = new THREE.TextureLoader().load( pieChart.getDataURL() );
+
+            var infoEchartMaterial = new THREE.MeshBasicMaterial({
+              transparent: true,
+              map: infoEchart,
+              side: THREE.DoubleSide
+            });
+
+            var echartPlane = new THREE.Mesh(new THREE.PlaneGeometry(30,30),infoEchartMaterial);
+            echartPlane.position.set(50,30, 0);
+            scene.add(echartPlane);
+
+          });
+
+          pieChart2 = echarts.init( $("<canvas width='512' height='512'></canvas>")[0] );
+          option2 = {
+              title : {
+                  text: '某站点用户访问来源',
+                  subtext: '纯属虚构',
+                  x:'center'
+              },
+              tooltip : {
+                  trigger: 'item',
+                  formatter: "{a} <br/>{b} : {c} ({d}%)"
+              },
+              legend: {
+                  orient: 'vertical',
+                  left: 'left',
+                  data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+              },
+              series : [
+                  {
+                      name: '访问来源',
+                      type: 'pie',
+                      radius : '55%',
+                      center: ['50%', '60%'],
+                      data:[
+                          {value:335, name:'直接访问'},
+                          {value:310, name:'邮件营销'},
+                          {value:234, name:'联盟广告'},
+                          {value:135, name:'视频广告'},
+                          {value:1548, name:'搜索引擎'}
+                      ],
+                      itemStyle: {
+                          emphasis: {
+                              shadowBlur: 10,
+                              shadowOffsetX: 0,
+                              shadowColor: 'rgba(0, 0, 0, 0.5)'
+                          }
+                      }
+                  }
+              ]
+          };
+          pieChart2.setOption(option2);
+
+          pieChart2.on('finished', function () {
+            var spriteMap = new THREE.TextureLoader().load( pieChart2.getDataURL() );
+
+            var spriteMaterial = new THREE.SpriteMaterial({
+              transparent: true,
+              map: spriteMap,
+              side: THREE.DoubleSide
+            });
+
+            var sprite = new THREE.Sprite( spriteMaterial );
+            
+            sprite.scale.set(30, 30, 1)
+            sprite.position.set(10, 30, 0);
+            scene.add(sprite);
+
+          });
+    }
+
+        initEcharts()
+
+        // 坐标轴对象
+        var axesHelper = new THREE.AxesHelper(500);
+        // 添加平行光
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+        directionalLight.position.set(50, 250, 500);
+        scene.add(directionalLight);
+        // 添加平行光2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight2.position.set(-400, -400, -400);
+        scene.add(directionalLight2);
+        // 添加环境光
+        var ambient = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambient);
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var k = width / height;
+        var s = 100;
+        // THREE.OrthographicCamera(left,right,top,bottom,near,far); near 相机最近的距离 far 相机最远的距离
+        var camera = new THREE.OrthographicCamera(-s * k, s * k, s, -s, 1, 20000);
+        camera.position.set(314, 202, 243);
+        camera.lookAt(scene.position);
+        var renderer = new THREE.WebGLRenderer({
+            antialias: true // 是否开启反锯齿，设置为true开启反锯齿。
+        });
+        renderer.setSize(width, height);
+        renderer.setClearColor(0x409EFF, 1);
+        document.body.appendChild(renderer.domElement);
+        /*
+        渲染器是生成一个DIV容器，它的作用是能把HTML元素绑定到三维物体上,
+        在DIV容器中各自的DOM元素分别封装到CSS2DObject的实例中，并在scene中增加
+        */
+        var labelRenderer = new THREE.CSS2DRenderer();
+        labelRenderer.setSize(window.innerWidth, window.innerHeight);
+        labelRenderer.domElement.style.position = 'absolute';
+        labelRenderer.domElement.style.top = '0';
+        labelRenderer.domElement.style.pointerEvents = 'none';
+        document.body.appendChild(labelRenderer.domElement);
+        // 它只会渲染场景，但不会把结果输出到场景上
+        var renderPass = new THREE.RenderPass(scene, camera);
+        // 渲染一根线条轮廓，其他线条均被渲染
+        var OutlinePass = new THREE.OutlinePass(new THREE.Vector2(window.innerWidth, window.innerHeight), scene,
+            camera);
+        OutlinePass.visibleEdgeColor = new THREE.Color(4, 1, 4);
+        OutlinePass.hiddenEdgeColor = new THREE.Color(2, 1, 2);
+        OutlinePass.edgeThickness = 10.0;
+        var composer = new THREE.EffectComposer(renderer);
+        composer.addPass(renderPass);
+        composer.addPass(OutlinePass);
+        // 添加抗锯齿的效果
+        var FXAAShaderPass = new THREE.ShaderPass(THREE.FXAAShader);
+        FXAAShaderPass.renderToScreen = true;
+        FXAAShaderPass.uniforms['resolution'].value.set(1 / window.innerWidth, 1 / window.innerHeight);
+        composer.addPass(FXAAShaderPass);
+
+        var clock = new THREE.Clock();
+        var FPS = 30;
+        var T = 1 / FPS;
+        var timeS = 0;
+        var i = 0;
+        scene.rotateY(-0.3);
+
+        function render() {
+            i += 1;
+            if (i < 300) {
+                scene.rotateY(0.001)
+            }
+            requestAnimationFrame(render);
+            var deltaT = clock.getDelta();
+            timeS = timeS + deltaT;
+            if (timeS > T) {
+                composer.render();
+                labelRenderer.render(scene, camera);
+                timeS = 0
+            }
+        }
+        render();
+        // 创建一个鼠标事件
+        var controls = new THREE.OrbitControls(camera);
+        controls.enablePan = false; // 是否禁用 缩放状态
+        controls.minZoom = 0.1; // 鼠标滚轮 最高缩小倍数
+        controls.maxZoom = 100; // 鼠标滚轮 最高放大倍数
+        创建粮仓地面(); // 创建粮仓地面
+        // 创建马路路面(); // 创建粮仓马路路面
+
+        function 创建粮仓地面() {
+            var geometry = new THREE.PlaneGeometry(270, 260);
+            var texture = new THREE.TextureLoader().load("UI图/softbox.png");
+            var material = new THREE.MeshLambertMaterial({
+                map: texture,
+                side: THREE.DoubleSide,
+                transparent: true, // 透明化
+            });
+            var mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            mesh.rotateX(-Math.PI / 2);
+            mesh.position.y = -0.01
+        }
+
+        var label = null;
+        renderer.localClippingEnabled = true;
+        var PlaneArr = [new THREE.Plane(new THREE.Vector3(-1, 0, 0), 1), new THREE.Plane(new THREE.Vector3(0, 0, -1),
+            0)];
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                treeData: treeData,
+                currentMesh: {
+                    name: '',
+                    仓高: 0,
+                    粮高: 0,
+                    谷物: '',
+                    温度: 0,
+                    吨位: 0,
+                },
+                name: null,
+                bool: false,
+                left: 500,
+                top: 500,
+                conLeft: -150 - 30,
+                openLeftBool: false,
+                S: 0,
+            },
+            methods: {},
+            watch: {
+
+            },
+            mounted: function () {},
+        });
+        let lastMesh = null;
+
+        // 点击事件
+        function choose(event) {
+            console.log(event, 'event')
+            console.log(lastMesh, 'lastMesh')
+            if (lastMesh) {
+                vm.bool = false;
+                lastMesh.material.clippingPlanes = null;
+                OutlinePass.selectedObjects = []
+            }
+            var Sx = event.clientX;
+            var Sy = event.clientY;
+            vm.left = Sx + 20;
+            vm.top = Sy + 20;
+            var x = (Sx / window.innerWidth) * 2 - 1;
+            var y = -(Sy / window.innerHeight) * 2 + 1;
+            var raycaster = new THREE.Raycaster();
+            raycaster.setFromCamera(new THREE.Vector2(x, y), camera);
+            var intersects = raycaster.intersectObjects(AllGroup.children, true);
+            console.log(intersects, 'intersects')
+            if (intersects.length > 0) {
+                vm.bool = true;
+                if (intersects[0].object.parent.name) {
+                    var mesh = intersects[0].object.parent;
+
+                } else {
+                    var mesh = intersects[0].object;
+                }
+                vm.currentMesh = mesh;
+                OutlinePass.selectedObjects = [mesh];
+                var S = vm.currentMesh.吨位;
+                vm.S = 0;
+                var startTime = new Date().getTime();
+                var interval = setInterval(function () {
+                    if (new Date().getTime() - startTime > S / 58 * 6) {
+                        clearInterval(interval);
+                        return
+                    }
+                    if (vm.S < S) {
+                        vm.S += 58;
+                        console.log(vm.S)
+                    }
+                }, 6);
+                scene.updateMatrixWorld(true);
+                var worldPosition = new THREE.Vector3();
+                mesh.getWorldPosition(worldPosition);
+                lastMesh = mesh;
+                PlaneArr[0].constant = worldPosition.x;
+                PlaneArr[1].constant = worldPosition.z;
+                mesh.material.clipIntersection = true;
+                mesh.material.clippingPlanes = PlaneArr
+            }
+        }
+        addEventListener('click', choose);
+        initFire(20, 40, 20, 30, 0); // 设置弹窗的位置
+
+        function initFire(w, h, posX, posY, posZ) {
+            function random(min, max, precision) {
+                var p = Math.pow(10, precision);
+                return Math.round((min + Math.random() * (max - min)) * p) / p
+            }
+        }
+        window.onresize = function () {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            k = window.innerWidth / window.innerHeight;
+            camera.left = -s * k;
+            camera.right = s * k;
+            camera.top = s;
+            camera.bottom = -s;
+            camera.updateProjectionMatrix();
+            location.reload()
+        };
+
+        /* 场景中的内容 */
+        var texture_left;
+        var texture_right;
+        var texture_top;
+        var texture_bottom;
+        function initContent() {
+            // 物体左方的贴图
+            texture_left = new THREE.TextureLoader().load('UI图/arrow-right.png');
+            texture_left.wrapS = THREE.RepeatWrapping;
+            texture_left.wrapT = THREE.RepeatWrapping;
+            texture_left.repeat.x = 10;
+            texture_left.repeat.y = 1;
+            
+            // 物体上方的贴图
+            texture_top = new THREE.TextureLoader().load('UI图/arrow-right.png');
+            texture_top.wrapS = THREE.RepeatWrapping;
+            texture_top.wrapT = THREE.RepeatWrapping;
+            texture_top.repeat.x = 3;
+            texture_top.repeat.y = 1;
+           
+            // 物体下方的贴图
+            texture_bottom = new THREE.TextureLoader().load('UI图/arrow-right.png');
+            texture_bottom.wrapS = THREE.RepeatWrapping;
+            texture_bottom.wrapT = THREE.RepeatWrapping;
+            texture_bottom.repeat.x = 3;
+            texture_bottom.repeat.y = 1;
+
+            // 物体右方的贴图
+            texture_right = new THREE.TextureLoader().load('UI图/arrow-right.png');
+            texture_right.wrapS = THREE.RepeatWrapping;
+            texture_right.wrapT = THREE.RepeatWrapping;
+            texture_right.repeat.x = 10;
+            texture_right.repeat.y = 1;
+
+            var planeGeometry = new THREE.PlaneGeometry(100, 10);
+            var plane_left = new THREE.MeshBasicMaterial();
+            var plane_right = new THREE.MeshBasicMaterial();
+            var plane_top = new THREE.MeshBasicMaterial();
+            var plane_bottom = new THREE.MeshBasicMaterial();
+            //左方贴图的材质
+            plane_left.color = new THREE.Color(0x00ff00);
+            plane_left.map = texture_left;
+            plane_left.transparent = true;
+            plane_left.side = THREE.DoubleSide;
+            //右方贴图的材质
+            plane_right.color = new THREE.Color(0x00ff00);
+            plane_right.map = texture_right;
+            plane_right.transparent = true;
+            plane_right.side = THREE.DoubleSide;
+            //上方贴图的材质
+            plane_top.color = new THREE.Color(0x00ff00);
+            plane_top.map = texture_top;
+            plane_top.transparent = true;
+            plane_top.side = THREE.DoubleSide;
+            //下方贴图的材质
+            plane_bottom.color = new THREE.Color(0x00ff00);
+            plane_bottom.map = texture_bottom;
+            plane_bottom.transparent = true;
+            plane_bottom.side = THREE.DoubleSide;
+
+            var plane_left = new THREE.Mesh(planeGeometry, plane_left);
+            var plane_right = new THREE.Mesh(planeGeometry, plane_right);
+            var plane_top = new THREE.Mesh(planeGeometry, plane_top);
+            var plane_bottom = new THREE.Mesh(planeGeometry, plane_bottom);
+
+            // var plane_left1 = new THREE.Mesh(planeGeometry, plane_left);
+            // var plane_right1 = new THREE.Mesh(planeGeometry, plane_right);
+            // var plane_top1 = new THREE.Mesh(planeGeometry, plane_top);
+            // var plane_bottom1 = new THREE.Mesh(planeGeometry, plane_bottom);
+
+            plane_left.translateY(13);
+            plane_left.translateX(27);
+            plane_left.translateZ(120);
+            plane_left.rotateX(Math.PI)
+            plane_left.rotateY(Math.PI / 1)
+            plane_left.rotateZ(-Math.PI / 2)
+            // plane_left1.translateY(13);
+            // plane_left1.translateX(5);
+            // plane_left1.translateZ(120);
+            // plane_left1.rotateX(Math.PI)
+            // plane_left1.rotateY(Math.PI/1)
+            // plane_left1.rotateZ(-Math.PI/2)
+
+            plane_right.translateY(13);
+            plane_right.translateX(24);
+            plane_right.translateZ(120);
+            plane_right.rotateX(Math.PI)
+            plane_right.rotateY(Math.PI / 1)
+            plane_right.rotateZ(Math.PI / 2)
+            // plane_right1.translateY(13);
+            // plane_right1.translateX(5);
+            // plane_right1.translateZ(120);
+            // plane_right1.rotateX(Math.PI)
+            // plane_right1.rotateY(Math.PI/1)
+            // plane_right1.rotateZ(Math.PI/2)
+
+            plane_top.translateY(25);
+            plane_top.translateX(25.5);
+            plane_top.translateZ(120);
+            plane_top.rotateX(Math.PI)
+            plane_top.rotateZ(-Math.PI)
+            // plane_top1.translateY(25);
+            // plane_top1.translateX(5.5);
+            // plane_top1.translateZ(120);
+            // plane_top1.rotateX(Math.PI)
+            // plane_top1.rotateZ(-Math.PI)
+
+            plane_bottom.translateY(1);
+            plane_bottom.translateX(25.5);
+            plane_bottom.translateZ(120);
+            // plane_bottom1.translateY(1);
+            // plane_bottom1.translateX(5.5);
+            // plane_bottom1.translateZ(120);
+
+            plane_left.scale.set(0.23, 0.1, 0.2);
+            plane_right.scale.set(0.23, 0.1, 0.2);
+            plane_top.scale.set(0.04, 0.05, 0.05);
+            plane_bottom.scale.set(0.04, 0.05, 0.05);
+            // plane_left1.scale.set(0.23, 0.1, 0.2);
+            // plane_right1.scale.set(0.23, 0.1, 0.2);
+            // plane_top1.scale.set(0.04, 0.05, 0.05);
+            // plane_bottom1.scale.set(0.04, 0.05, 0.05);
+
+            scene.add(plane_left);
+            scene.add(plane_right);
+            scene.add(plane_top);
+            scene.add(plane_bottom);
+            // scene.add(plane_left1);
+            // scene.add(plane_right1);
+            // scene.add(plane_top1);
+            // scene.add(plane_bottom1);
+
+
+        }
+        /* 窗口变动触发 */
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        /* 数据更新 */
+        function update() {
+            // 设置纹理偏移
+            texture_left.offset.x -= 0.02;
+            texture_right.offset.x -= 0.02;
+            texture_top.offset.x -= 0.02;
+            texture_bottom.offset.x -= 0.02;
+        }
+
+        /* 初始化 */
+        // function init() {
+        //     window.addEventListener('resize', onWindowResize, false);
+        // }
+
+        /* 循环渲染 */
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+            update();
+        }
+
+        /* 初始加载 */
+        // (function () {
+        //     init();
+        // })();
+    </script>
+</body>
+
+</html>

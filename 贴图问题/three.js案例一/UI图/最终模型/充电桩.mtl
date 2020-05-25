@@ -1,0 +1,51 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl metallic_cool_grey
+Kd 0.6784314 0.6784314 0.7294118
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl color
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl gloss_blue
+Kd 0.3803922 0.4784314 0.7882353
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl aluminum_powdercoat
+Kd 0.9019608 0.9215686 0.9215686
+map_Kd D:\SW outlet\SOLIDWORKS Visualize Content\Models\直流桩终端简化\powdercoat_light.dds
+Ks 0.5 0.5 0.5
+map_bump -bm 0.5 D:\SW outlet\SOLIDWORKS Visualize Content\Models\直流桩终端简化\powdercoat_n.dds
+bump D:\SW outlet\SOLIDWORKS Visualize Content\Models\直流桩终端简化\powdercoat_n.dds
+illum 2
+
+newmtl black_high_gloss_plastic
+Kd 0.1019608 0.1019608 0.1019608
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl white_led
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl black_high_gloss_plastic
+Kd 0.1019608 0.1019608 0.1019608
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl white_high_gloss_plastic
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109

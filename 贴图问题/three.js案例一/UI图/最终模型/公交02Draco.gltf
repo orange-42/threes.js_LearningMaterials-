@@ -1,0 +1,601 @@
+{
+  "accessors": [
+    {
+      "name": "|装配体3|Root|bus7M-1|white_1_0_indices",
+      "componentType": 5125,
+      "count": 28224,
+      "min": [
+        0
+      ],
+      "max": [
+        14469
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|white_1_0_positions",
+      "componentType": 5126,
+      "count": 8310,
+      "min": [
+        -2.541980028152466,
+        0.3769882023334503,
+        4.677040100097656
+      ],
+      "max": [
+        0.12697960436344147,
+        2.777549982070923,
+        11.860260009765625
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|white_1_0_normals",
+      "componentType": 5126,
+      "count": 8310,
+      "min": [
+        -1,
+        -0.9510565400123596,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|white_1_0_texcoords",
+      "componentType": 5126,
+      "count": 8310,
+      "min": [
+        0.31696560978889465,
+        0.001850700005888939
+      ],
+      "max": [
+        0.6830344200134277,
+        0.9978228211402893
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color_1_0_indices",
+      "componentType": 5125,
+      "count": 253470,
+      "min": [
+        0
+      ],
+      "max": [
+        129613
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color_1_0_positions",
+      "componentType": 5126,
+      "count": 90968,
+      "min": [
+        -2.541980028152466,
+        0.0002998113923240453,
+        4.653124809265137
+      ],
+      "max": [
+        0.12697960436344147,
+        2.7483060359954834,
+        11.824749946594238
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color_1_0_normals",
+      "componentType": 5126,
+      "count": 90968,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color_1_0_texcoords",
+      "componentType": 5126,
+      "count": 90968,
+      "min": [
+        0.30841130018234253,
+        0
+      ],
+      "max": [
+        0.6915886998176575,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000_1_0_indices",
+      "componentType": 5125,
+      "count": 30966,
+      "min": [
+        0
+      ],
+      "max": [
+        15079
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000_1_0_positions",
+      "componentType": 5126,
+      "count": 9847,
+      "min": [
+        -2.44950008392334,
+        0.0002998113923240453,
+        4.711540222167969
+      ],
+      "max": [
+        0.0345001183450222,
+        0.8627998232841492,
+        11.508040428161621
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000_1_0_normals",
+      "componentType": 5126,
+      "count": 9847,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000_1_0_texcoords",
+      "componentType": 5126,
+      "count": 9847,
+      "min": [
+        -227.00979614257812,
+        -269.7952880859375
+      ],
+      "max": [
+        228.00979614257812,
+        28.344409942626953
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2_1_0_indices",
+      "componentType": 5125,
+      "count": 222,
+      "min": [
+        0
+      ],
+      "max": [
+        125
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2_1_0_positions",
+      "componentType": 5126,
+      "count": 76,
+      "min": [
+        -0.7791972756385803,
+        1.0761020183563232,
+        4.653124809265137
+      ],
+      "max": [
+        -0.5516390204429626,
+        1.1106020212173462,
+        4.653124809265137
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2_1_0_normals",
+      "componentType": 5126,
+      "count": 76,
+      "min": [
+        -5.551115123125783e-17,
+        -1.2325950174710371e-32,
+        -1
+      ],
+      "max": [
+        -5.551115123125783e-17,
+        -1.2325950174710371e-32,
+        -1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2_1_0_texcoords",
+      "componentType": 5126,
+      "count": 76,
+      "min": [
+        0,
+        0.4241952896118164
+      ],
+      "max": [
+        0.9999995231628418,
+        0.5758047103881836
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass_1_0_indices",
+      "componentType": 5125,
+      "count": 1212,
+      "min": [
+        0
+      ],
+      "max": [
+        635
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass_1_0_positions",
+      "componentType": 5126,
+      "count": 418,
+      "min": [
+        -2.4149999618530273,
+        1.1461139917373657,
+        4.710803031921387
+      ],
+      "max": [
+        0,
+        2.5485219955444336,
+        11.57013988494873
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass_1_0_normals",
+      "componentType": 5126,
+      "count": 418,
+      "min": [
+        -1,
+        -6.162975822039155e-33,
+        -0.9961289763450623
+      ],
+      "max": [
+        1,
+        0.3241663873195648,
+        0.9999998807907104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass_1_0_texcoords",
+      "componentType": 5126,
+      "count": 418,
+      "min": [
+        0.33301588892936707,
+        0.009900400415062904
+      ],
+      "max": [
+        0.6674878001213074,
+        0.9864190816879272
+      ],
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "公交02Draco",
+      "byteLength": 408604,
+      "uri": "公交02Draco.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 37450
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 37452,
+      "byteLength": 323716
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 361168,
+      "byteLength": 43905
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 405076,
+      "byteLength": 596
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 405672,
+      "byteLength": 2929
+    }
+  ],
+  "materials": [
+    {
+      "name": "white",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "color",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5960785,
+          0.6666667,
+          0.6862745,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.90009891
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "PW-MT11000",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.1098039,
+          0.1098039,
+          0.1098039,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.992179029
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "color-2",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.90009891
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "clear_glass",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.9
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "|装配体3|Root|bus7M-1|white_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 3,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "material": 4,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 4,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "|装配体3|Root|bus7M-1|white",
+      "mesh": 0
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color",
+      "mesh": 1
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|PW-MT11000",
+      "mesh": 2
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|color-2",
+      "mesh": 3
+    },
+    {
+      "name": "|装配体3|Root|bus7M-1|clear_glass",
+      "mesh": 4
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

@@ -1,0 +1,140 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl blue
+Kd 0.04705882 0.3411765 0.7058824
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl blue-2
+Kd 0.03921569 0.4901961 0.7098039
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl color(Legacy)
+Kd 0.03921569 0.4901961 0.7098039
+Ks 0.6509804 0.6509804 0.6509804
+illum 2
+Ns 2.087912
+
+newmtl color
+Kd 0.8509804 0.8509804 0.8509804
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl color-2
+Kd 0.03921569 0.4901961 0.7098039
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl color-3
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl color-2
+Kd 0.03921569 0.4901961 0.7098039
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999
+
+newmtl satin_finish_aluminum
+Kd 0.8666667 0.8666667 0.8901961
+Ks 0.8666667 0.8666667 0.8901961
+illum 2
+Ns 9.999999

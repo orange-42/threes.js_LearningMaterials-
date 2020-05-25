@@ -1,0 +1,35 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl white
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl color
+Kd 0.5960785 0.6666667 0.6862745
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl PW-MT11000
+Kd 0.1098039 0.1098039 0.1098039
+Ks 0.5 0.5 0.5
+map_bump -bm 0.06 C:\Users\Yang\Desktop\临时\公交02\plasticmt11010_normalmap.dds
+bump C:\Users\Yang\Desktop\临时\公交02\plasticmt11010_normalmap.dds
+illum 2
+Ns 7.820971
+
+newmtl color-2
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl clear_glass
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 100

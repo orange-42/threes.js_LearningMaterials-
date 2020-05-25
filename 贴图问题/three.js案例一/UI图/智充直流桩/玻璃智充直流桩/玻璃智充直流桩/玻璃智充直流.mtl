@@ -1,0 +1,40 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl glass_sandblasted_01
+Kd 0.9686275 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 29.28571
+
+newmtl color-2
+Kd 0.7529412 0.7529412 0.7529412
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl glass_sandblasted_01
+Kd 0.9686275 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 29.28571
+
+newmtl glass_sandblasted_01
+Kd 0.9686275 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 29.28571
+
+newmtl glass_sandblasted_01
+Kd 0.9686275 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 29.28571
+
+newmtl glass_sandblasted_01
+Kd 0.9686275 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 29.28571

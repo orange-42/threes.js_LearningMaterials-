@@ -1,0 +1,654 @@
+{
+  "accessors": [
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white_1_0_indices",
+      "componentType": 5123,
+      "count": 3528,
+      "min": [
+        0
+      ],
+      "max": [
+        1809
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white_1_0_positions",
+      "componentType": 5126,
+      "count": 1328,
+      "min": [
+        -0.32499998807907104,
+        0.0003000000142492354,
+        -0.4000000059604645
+      ],
+      "max": [
+        0.32499998807907104,
+        1.8003000020980835,
+        0.4000000059604645
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white_1_0_normals",
+      "componentType": 5126,
+      "count": 1328,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white_1_0_texcoords",
+      "componentType": 5126,
+      "count": 1328,
+      "min": [
+        0.2777777910232544,
+        0
+      ],
+      "max": [
+        0.7222222089767456,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2_1_0_indices",
+      "componentType": 5123,
+      "count": 33294,
+      "min": [
+        0
+      ],
+      "max": [
+        15329
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2_1_0_positions",
+      "componentType": 5126,
+      "count": 11347,
+      "min": [
+        -0.32499998807907104,
+        0.1023000031709671,
+        0.30000001192092896
+      ],
+      "max": [
+        0.32499998807907104,
+        1.7683000564575195,
+        0.4009999930858612
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2_1_0_normals",
+      "componentType": 5126,
+      "count": 11347,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2_1_0_texcoords",
+      "componentType": 5126,
+      "count": 11347,
+      "min": [
+        0.3049220144748688,
+        0
+      ],
+      "max": [
+        0.6950780153274536,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color_1_0_indices",
+      "componentType": 5123,
+      "count": 162,
+      "min": [
+        0
+      ],
+      "max": [
+        89
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color_1_0_positions",
+      "componentType": 5126,
+      "count": 55,
+      "min": [
+        -0.10999999940395355,
+        1.3063479661941528,
+        0.4009999930858612
+      ],
+      "max": [
+        0.10999999940395355,
+        1.526252031326294,
+        0.4009999930858612
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color_1_0_normals",
+      "componentType": 5126,
+      "count": 55,
+      "min": [
+        0,
+        0,
+        1
+      ],
+      "max": [
+        0,
+        0,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color_1_0_texcoords",
+      "componentType": 5126,
+      "count": 55,
+      "min": [
+        0,
+        0.00021980000019539148
+      ],
+      "max": [
+        1,
+        0.999780535697937
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint_1_0_indices",
+      "componentType": 5123,
+      "count": 6108,
+      "min": [
+        0
+      ],
+      "max": [
+        2667
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint_1_0_positions",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        -0.3230000138282776,
+        0.15029999613761902,
+        -0.28299999237060547
+      ],
+      "max": [
+        -0.2529999911785126,
+        1.7002999782562256,
+        0.28299999237060547
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint_1_0_normals",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint_1_0_texcoords",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        0.3174194097518921,
+        0
+      ],
+      "max": [
+        0.6825805902481079,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint_1_0_indices",
+      "componentType": 5123,
+      "count": 6108,
+      "min": [
+        0
+      ],
+      "max": [
+        2667
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint_1_0_positions",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        0.2529999911785126,
+        0.15029999613761902,
+        -0.28299999237060547
+      ],
+      "max": [
+        0.3230000138282776,
+        1.7002999782562256,
+        0.28299999237060547
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint_1_0_normals",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint_1_0_texcoords",
+      "componentType": 5126,
+      "count": 1556,
+      "min": [
+        0.3174194097518921,
+        0
+      ],
+      "max": [
+        0.6825805902481079,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3_1_0_indices",
+      "componentType": 5123,
+      "count": 30420,
+      "min": [
+        0
+      ],
+      "max": [
+        13993
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3_1_0_positions",
+      "componentType": 5126,
+      "count": 10442,
+      "min": [
+        -0.32499998807907104,
+        0.1023000031709671,
+        -0.4000000059604645
+      ],
+      "max": [
+        0.32499998807907104,
+        1.7683000564575195,
+        -0.30000001192092896
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3_1_0_normals",
+      "componentType": 5126,
+      "count": 10442,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3_1_0_texcoords",
+      "componentType": 5126,
+      "count": 10442,
+      "min": [
+        0.3049220144748688,
+        0
+      ],
+      "max": [
+        0.6950780153274536,
+        1
+      ],
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "0313draco",
+      "byteLength": 106080,
+      "uri": "0313draco.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 5882
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5884,
+      "byteLength": 43838
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 49724,
+      "byteLength": 514
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 50240,
+      "byteLength": 8113
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 58356,
+      "byteLength": 7863
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 66220,
+      "byteLength": 39858
+    }
+  ],
+  "materials": [
+    {
+      "name": "white",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "color",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2980392,
+          0.2980392,
+          0.2980392,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.90009891
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "black_spray_paint",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.05882353,
+          0.05882353,
+          0.05882353,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 1,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 2,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "material": 2,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 4,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 21,
+            "NORMAL": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 20,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 5,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "|装配体1|Root|参考桩体0223-1|white",
+      "mesh": 0
+    },
+    {
+      "name": "|装配体1|Root|门01-1|white-2",
+      "mesh": 1
+    },
+    {
+      "name": "|装配体1|Root|门01-1|color",
+      "mesh": 2
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-1|black_spray_paint",
+      "mesh": 3
+    },
+    {
+      "name": "|装配体1|Root|插枪槽01-2|black_spray_paint",
+      "mesh": 4
+    },
+    {
+      "name": "|装配体1|Root|后门01-1|white-3",
+      "mesh": 5
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

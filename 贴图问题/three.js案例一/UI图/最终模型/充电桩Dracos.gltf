@@ -1,0 +1,920 @@
+{
+  "accessors": [
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey_1_0_indices",
+      "componentType": 5123,
+      "count": 66,
+      "min": [
+        0
+      ],
+      "max": [
+        43
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey_1_0_positions",
+      "componentType": 5126,
+      "count": 40,
+      "min": [
+        -0.15000000596046448,
+        0.03225678950548172,
+        1.6009999513626099
+      ],
+      "max": [
+        0.15000000596046448,
+        0.2683432102203369,
+        1.7000000476837158
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey_1_0_normals",
+      "componentType": 5126,
+      "count": 40,
+      "min": [
+        -1,
+        -1,
+        0
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey_1_0_texcoords",
+      "componentType": 5126,
+      "count": 40,
+      "min": [
+        2.9802320611338473e-8,
+        0.10652259737253189
+      ],
+      "max": [
+        1,
+        0.8934773802757263
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|color_1_0_indices",
+      "componentType": 5123,
+      "count": 141,
+      "min": [
+        0
+      ],
+      "max": [
+        76
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|color_1_0_positions",
+      "componentType": 5126,
+      "count": 73,
+      "min": [
+        -0.15000000596046448,
+        0.0003000051074195653,
+        0.0494999997317791
+      ],
+      "max": [
+        0.15000000596046448,
+        0.30329999327659607,
+        1.6009999513626099
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|color_1_0_normals",
+      "componentType": 5126,
+      "count": 73,
+      "min": [
+        0,
+        -1,
+        -1
+      ],
+      "max": [
+        0,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|color_1_0_texcoords",
+      "componentType": 5126,
+      "count": 73,
+      "min": [
+        0.403319388628006,
+        0.0006446000188589096
+      ],
+      "max": [
+        0.5966805815696716,
+        0.9993554353713989
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue_1_0_indices",
+      "componentType": 5123,
+      "count": 474,
+      "min": [
+        0
+      ],
+      "max": [
+        267
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue_1_0_positions",
+      "componentType": 5126,
+      "count": 200,
+      "min": [
+        -0.15000000596046448,
+        0.0003000051074195653,
+        0
+      ],
+      "max": [
+        0.15000000596046448,
+        0.3003000020980835,
+        1.600000023841858
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue_1_0_normals",
+      "componentType": 5126,
+      "count": 200,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue_1_0_texcoords",
+      "componentType": 5126,
+      "count": 200,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat_1_0_indices",
+      "componentType": 5123,
+      "count": 126,
+      "min": [
+        0
+      ],
+      "max": [
+        69
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat_1_0_positions",
+      "componentType": 5126,
+      "count": 50,
+      "min": [
+        -0.15000000596046448,
+        0.275299996137619,
+        0.5504999756813049
+      ],
+      "max": [
+        0.15000000596046448,
+        0.3003000020980835,
+        0.949999988079071
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat_1_0_normals",
+      "componentType": 5126,
+      "count": 50,
+      "min": [
+        -0.7071067690849304,
+        0,
+        -1
+      ],
+      "max": [
+        0.7071067690849304,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat_1_0_texcoords",
+      "componentType": 5126,
+      "count": 50,
+      "min": [
+        -15.205269813537598,
+        -1.5354750156402588
+      ],
+      "max": [
+        0.9021086096763611,
+        -0.1931930035352707
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic_1_0_indices",
+      "componentType": 5123,
+      "count": 1782,
+      "min": [
+        0
+      ],
+      "max": [
+        785
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic_1_0_positions",
+      "componentType": 5126,
+      "count": 513,
+      "min": [
+        -0.09600000083446503,
+        0.3003000020980835,
+        0.14650000631809235
+      ],
+      "max": [
+        0.09600000083446503,
+        0.31029999256134033,
+        0.6610000133514404
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic_1_0_normals",
+      "componentType": 5126,
+      "count": 513,
+      "min": [
+        -1,
+        0,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic_1_0_texcoords",
+      "componentType": 5126,
+      "count": 513,
+      "min": [
+        0.002915381919592619,
+        0.001762000028975308
+      ],
+      "max": [
+        0.9970846176147461,
+        0.991279125213623
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led_1_0_indices",
+      "componentType": 5123,
+      "count": 6,
+      "min": [
+        0
+      ],
+      "max": [
+        3
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led_1_0_positions",
+      "componentType": 5126,
+      "count": 4,
+      "min": [
+        -0.07317140698432922,
+        0.30730000138282776,
+        0.16681429743766785
+      ],
+      "max": [
+        0.07317140698432922,
+        0.30730000138282776,
+        0.23418569564819336
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led_1_0_normals",
+      "componentType": 5126,
+      "count": 4,
+      "min": [
+        0,
+        1,
+        0
+      ],
+      "max": [
+        0,
+        1,
+        0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led_1_0_texcoords",
+      "componentType": 5126,
+      "count": 4,
+      "min": [
+        0,
+        0.2698163092136383
+      ],
+      "max": [
+        1,
+        0.7301837205886841
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2_1_0_indices",
+      "componentType": 5123,
+      "count": 663,
+      "min": [
+        0
+      ],
+      "max": [
+        310
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2_1_0_positions",
+      "componentType": 5126,
+      "count": 235,
+      "min": [
+        -0.05400000140070915,
+        0.3003000020980835,
+        0.31049999594688416
+      ],
+      "max": [
+        0.05400000140070915,
+        0.3052999973297119,
+        0.6610000133514404
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2_1_0_normals",
+      "componentType": 5126,
+      "count": 235,
+      "min": [
+        -1,
+        0,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2_1_0_texcoords",
+      "componentType": 5126,
+      "count": 235,
+      "min": [
+        0.07703279703855515,
+        0
+      ],
+      "max": [
+        0.9229671955108643,
+        1.0000001192092896
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic_1_0_indices",
+      "componentType": 5123,
+      "count": 30,
+      "min": [
+        0
+      ],
+      "max": [
+        19
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic_1_0_positions",
+      "componentType": 5126,
+      "count": 20,
+      "min": [
+        -0.002779295900836587,
+        0.3052999973297119,
+        0.47195351123809814
+      ],
+      "max": [
+        0.002779295900836587,
+        0.32030001282691956,
+        0.49704650044441223
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic_1_0_normals",
+      "componentType": 5126,
+      "count": 20,
+      "min": [
+        -1,
+        0,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic_1_0_texcoords",
+      "componentType": 5126,
+      "count": 20,
+      "min": [
+        0,
+        0
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "充电桩Dracos",
+      "byteLength": 7048,
+      "uri": "充电桩Dracos.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 346
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 348,
+      "byteLength": 578
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 928,
+      "byteLength": 1222
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2152,
+      "byteLength": 521
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2676,
+      "byteLength": 2574
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5252,
+      "byteLength": 179
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5432,
+      "byteLength": 1363
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6796,
+      "byteLength": 252
+    }
+  ],
+  "materials": [
+    {
+      "name": "metallic_cool_grey",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "color",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "gloss_blue",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "aluminum_powdercoat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "black_high_gloss_plastic",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "white_led",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "white_high_gloss_plastic",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|color_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 3,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "material": 4,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 4,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 21,
+            "NORMAL": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 20,
+          "material": 5,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 5,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 25,
+            "NORMAL": 26,
+            "TEXCOORD_0": 27
+          },
+          "indices": 24,
+          "material": 4,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 6,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 29,
+            "NORMAL": 30,
+            "TEXCOORD_0": 31
+          },
+          "indices": 28,
+          "material": 6,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 7,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "|公交充电桩1|Root|metallic_cool_grey",
+      "mesh": 0
+    },
+    {
+      "name": "|公交充电桩1|Root|color",
+      "mesh": 1
+    },
+    {
+      "name": "|公交充电桩1|Root|gloss_blue",
+      "mesh": 2
+    },
+    {
+      "name": "|公交充电桩1|Root|aluminum_powdercoat",
+      "mesh": 3
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic",
+      "mesh": 4
+    },
+    {
+      "name": "|公交充电桩1|Root|white_led",
+      "mesh": 5
+    },
+    {
+      "name": "|公交充电桩1|Root|black_high_gloss_plastic-2",
+      "mesh": 6
+    },
+    {
+      "name": "|公交充电桩1|Root|white_high_gloss_plastic",
+      "mesh": 7
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

@@ -1,0 +1,827 @@
+{
+  "accessors": [
+    {
+      "name": "|10.5bus|Root|color_1_0_indices",
+      "componentType": 5125,
+      "count": 1102452,
+      "min": [
+        0
+      ],
+      "max": [
+        526245
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|color_1_0_positions",
+      "componentType": 5126,
+      "count": 271926,
+      "min": [
+        -1.382053017616272,
+        0.2032593935728073,
+        -10.633230209350586
+      ],
+      "max": [
+        1.388213038444519,
+        2.8277509212493896,
+        0.03910107910633087
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|color_1_0_normals",
+      "componentType": 5126,
+      "count": 271926,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|color_1_0_texcoords",
+      "componentType": 5126,
+      "count": 271926,
+      "min": [
+        -5.9604641222676946e-8,
+        0.010600600391626358
+      ],
+      "max": [
+        1,
+        0.9996322393417358
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass_1_0_indices",
+      "componentType": 5125,
+      "count": 21360,
+      "min": [
+        0
+      ],
+      "max": [
+        10011
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass_1_0_positions",
+      "componentType": 5126,
+      "count": 7793,
+      "min": [
+        -1.2153569459915161,
+        0.6968911290168762,
+        -10.627579689025879
+      ],
+      "max": [
+        1.2153639793395996,
+        2.9947431087493896,
+        -0.13356059789657593
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass_1_0_normals",
+      "componentType": 5126,
+      "count": 7793,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass_1_0_texcoords",
+      "componentType": 5126,
+      "count": 7793,
+      "min": [
+        5.9604641222676946e-8,
+        0
+      ],
+      "max": [
+        0.9999998807907104,
+        0.9999999403953552
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|green_1_0_indices",
+      "componentType": 5125,
+      "count": 5694,
+      "min": [
+        0
+      ],
+      "max": [
+        2703
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|green_1_0_positions",
+      "componentType": 5126,
+      "count": 1587,
+      "min": [
+        -1.3826169967651367,
+        0.4149259030818939,
+        -10.63875961303711
+      ],
+      "max": [
+        1.3826169967651367,
+        0.927825927734375,
+        -0.06108560040593147
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|green_1_0_normals",
+      "componentType": 5126,
+      "count": 1587,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|green_1_0_texcoords",
+      "componentType": 5126,
+      "count": 1587,
+      "min": [
+        0.003381818998605013,
+        0.0015205000527203083
+      ],
+      "max": [
+        0.9966182112693787,
+        0.999602198600769
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber_1_0_indices",
+      "componentType": 5125,
+      "count": 14280,
+      "min": [
+        0
+      ],
+      "max": [
+        5983
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber_1_0_positions",
+      "componentType": 5126,
+      "count": 3160,
+      "min": [
+        -1.1150000095367432,
+        0.00029999949038028717,
+        -7.9946088790893555
+      ],
+      "max": [
+        1.1150000095367432,
+        1.0135350227355957,
+        -1.964548945426941
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber_1_0_normals",
+      "componentType": 5126,
+      "count": 3160,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber_1_0_texcoords",
+      "componentType": 5126,
+      "count": 3160,
+      "min": [
+        0.002160578966140747,
+        0.027938399463891983
+      ],
+      "max": [
+        0.9978395104408264,
+        0.9745045900344849
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|yellow_1_0_indices",
+      "componentType": 5125,
+      "count": 91440,
+      "min": [
+        0
+      ],
+      "max": [
+        51207
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|yellow_1_0_positions",
+      "componentType": 5126,
+      "count": 41203,
+      "min": [
+        -1.2153669595718384,
+        0.3999752104282379,
+        -10.63323974609375
+      ],
+      "max": [
+        1.2153480052947998,
+        3.120695114135742,
+        -0.13356059789657593
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|yellow_1_0_normals",
+      "componentType": 5126,
+      "count": 41203,
+      "min": [
+        -1,
+        -1,
+        -1
+      ],
+      "max": [
+        1,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|yellow_1_0_texcoords",
+      "componentType": 5126,
+      "count": 41203,
+      "min": [
+        2.9802320611338473e-8,
+        1.0000000116860974e-7
+      ],
+      "max": [
+        1,
+        1
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|red_1_0_indices",
+      "componentType": 5125,
+      "count": 2490,
+      "min": [
+        0
+      ],
+      "max": [
+        1215
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|red_1_0_positions",
+      "componentType": 5126,
+      "count": 766,
+      "min": [
+        -1.1439870595932007,
+        1.0169670581817627,
+        -0.1557852029800415
+      ],
+      "max": [
+        1.1468149423599243,
+        1.3081320524215698,
+        -0.1334487944841385
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|red_1_0_normals",
+      "componentType": 5126,
+      "count": 766,
+      "min": [
+        -0.9929295182228088,
+        -0.999989926815033,
+        -1
+      ],
+      "max": [
+        0.9926838278770447,
+        1,
+        1
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|red_1_0_texcoords",
+      "componentType": 5126,
+      "count": 766,
+      "min": [
+        -5.9604641222676946e-8,
+        0.43644919991493225
+      ],
+      "max": [
+        1,
+        0.5635507702827454
+      ],
+      "type": "VEC2"
+    },
+    {
+      "name": "|10.5bus|Root|white_led_1_0_indices",
+      "componentType": 5125,
+      "count": 1446,
+      "min": [
+        0
+      ],
+      "max": [
+        701
+      ],
+      "type": "SCALAR"
+    },
+    {
+      "name": "|10.5bus|Root|white_led_1_0_positions",
+      "componentType": 5126,
+      "count": 451,
+      "min": [
+        -1.134660005569458,
+        2.709630012512207,
+        -0.38327381014823914
+      ],
+      "max": [
+        1.1197669506072998,
+        3.044034004211426,
+        -0.22934140264987946
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|white_led_1_0_normals",
+      "componentType": 5126,
+      "count": 451,
+      "min": [
+        -1,
+        -0.9843828082084656,
+        -0.9843828678131104
+      ],
+      "max": [
+        1,
+        0.9302317500114441,
+        0.9843828678131104
+      ],
+      "type": "VEC3"
+    },
+    {
+      "name": "|10.5bus|Root|white_led_1_0_texcoords",
+      "componentType": 5126,
+      "count": 451,
+      "min": [
+        2.9802320611338473e-8,
+        0.42583391070365906
+      ],
+      "max": [
+        0.9999998807907104,
+        0.5741661190986633
+      ],
+      "type": "VEC2"
+    }
+  ],
+  "asset": {
+    "generator": "obj2gltf",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "name": "公交1Draco",
+      "byteLength": 1373844,
+      "uri": "公交1Draco.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 1197456
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1197456,
+      "byteLength": 31440
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1228896,
+      "byteLength": 6647
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1235544,
+      "byteLength": 15589
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1251136,
+      "byteLength": 116086
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1367224,
+      "byteLength": 3990
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1371216,
+      "byteLength": 2627
+    }
+  ],
+  "materials": [
+    {
+      "name": "color",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7529412,
+          0.7529412,
+          0.7529412,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.90009891
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "clear_glass",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.9
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "green",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0,
+          0.4705882,
+          0.01568628,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "matte_rubber",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.2980392,
+          0.2980392,
+          0.2980392,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.998454921
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "yellow",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9529412,
+          0.945098,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "red",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.7529412,
+          0,
+          0,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    },
+    {
+      "name": "white_led",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "alphaMode": "OPAQUE",
+      "doubleSided": false
+    }
+  ],
+  "meshes": [
+    {
+      "name": "|10.5bus|Root|color_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "material": 0,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|green_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "material": 2,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "material": 3,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|yellow_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "material": 4,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 4,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|red_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 21,
+            "NORMAL": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 20,
+          "material": 5,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 5,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "|10.5bus|Root|white_led_1",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 25,
+            "NORMAL": 26,
+            "TEXCOORD_0": 27
+          },
+          "indices": 24,
+          "material": 6,
+          "mode": 4,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 6,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "|10.5bus|Root|color",
+      "mesh": 0
+    },
+    {
+      "name": "|10.5bus|Root|clear_glass",
+      "mesh": 1
+    },
+    {
+      "name": "|10.5bus|Root|green",
+      "mesh": 2
+    },
+    {
+      "name": "|10.5bus|Root|matte_rubber",
+      "mesh": 3
+    },
+    {
+      "name": "|10.5bus|Root|yellow",
+      "mesh": 4
+    },
+    {
+      "name": "|10.5bus|Root|red",
+      "mesh": 5
+    },
+    {
+      "name": "|10.5bus|Root|white_led",
+      "mesh": 6
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

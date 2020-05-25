@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script src='js/OrbitControls.js'></script>
+    <script src='js/Detector.js'></script>
+    <script src="js/BinaryLoader.js"></script>
+    <script src="js/stats.min.js"></script>
+    <div id="onGeometry" style="width:500px; height: 500px;">
+</head>
+<body>
+    <script type="text/javascript">
+        var scene = new THREE.Scene();//创建场景
+        var path = "http://ae01.alicdn.com/kf/";       //设置路径
+        var format = '.jpg';                        //设定格式
+    var urls = [
+       path + 'HTB1GBRUhpooBKNjSZFPq6xa2XXa5'+ format,     
+       path + 'HTB1nqDXm98YBeNkSnb4q6yevFXa0'+ format,
+       path + 'HTB13tL9vkOWBuNjSsppq6xPgpXay' + format,
+       path + 'HTB1VELXvgaTBuNjSszfq6xgfpXac' + format,
+       path + 'HTB1PLbTvf9TBuNjy1zbq6xpepXao' + format,
+       path + 'HTB1bxWzmZuYBuNkSmRyq6AA3pXa8' + format
+        ];
+        var textureCube = new THREE.CubeTextureLoader().load( urls );
+//添加天空盒子背景图
+ 
+            scene.background = textureCube;
+         
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);//添加相机
+            camera.position.z = 5;
+ 
+        var geometry = new THREE.CubeGeometry(1,1,1);
+        var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+        var cube = new THREE.Mesh(geometry, material); 
+        scene.add(cube);
+         
+        var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+ 
+        var container=document.getElementById('onGeometry').appendChild(renderer.domElement);
+ 
+        var orbit = new THREE.OrbitControls( camera, container );
+            orbit.addEventListener( 'change', render );
+         
+        function render() {
+            requestAnimationFrame(render);
+            // cube.rotation.x += 0.1;
+            // cube.rotation.y += 0.1;
+            renderer.render(scene, camera);
+        }
+        render();
+ 
+    </script>
+</body>
+</html>

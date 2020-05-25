@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天空盒加入OBJ</title>
+    <script type="text/javascript" src="js/three.min.js"></script>
+    <script src='js/OrbitControls.js'></script>
+    <script src='js/Detector.js'></script>
+    <script src="js/BinaryLoader.js"></script>
+    <script src="js/stats.min.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/threejs/examples/js/loaders/MTLLoader.js"></script>
+    <script src="http://www.yanhuangxueyuan.com/threejs/examples/js/loaders/OBJLoader.js"></script>
+    <div id="onGeometry" style="width:500px; height: 500px;">
+</head>
+<body>
+    <script type="text/javascript">
+        var scene = new THREE.Scene();//创建场景
+        var path = "http://ae01.alicdn.com/kf/";       //设置路径
+        var format = '.jpg';                        //设定格式
+    var urls = [
+       path + 'HTB1GBRUhpooBKNjSZFPq6xa2XXa5'+ format,     
+       path + 'HTB1nqDXm98YBeNkSnb4q6yevFXa0'+ format,
+       path + 'HTB13tL9vkOWBuNjSsppq6xPgpXay' + format,
+       path + 'HTB1VELXvgaTBuNjSszfq6xgfpXac' + format,
+       path + 'HTB1PLbTvf9TBuNjy1zbq6xpepXao' + format,
+       path + 'HTB1bxWzmZuYBuNkSmRyq6AA3pXa8' + format
+        ];
+        var textureCube = new THREE.CubeTextureLoader().load( urls );
+//添加天空盒子背景图
+ 
+            scene.background = textureCube;
+         
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);//添加相机
+            camera.position.z = 5;
+
+
+          // 添加平行光
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+        directionalLight.position.set(50, 250, 500);
+        scene.add(directionalLight);
+        // 添加平行光2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight2.position.set(-400, -400, -400);
+        scene.add(directionalLight2);
+        // 添加环境光
+        var ambient = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambient);
+
+// // 给场景添加一个半球光出来
+
+//     hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.8 );
+
+//     hemiLight.color.setHSL( 0.6, 1, 0.6 );
+
+//     hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
+
+//     hemiLight.position.set( 0, 50, 0 );
+
+//     scene.add( hemiLight );
+
+// // 给场景添加一个平行光出来
+
+//  var light = new THREE.DirectionalLight(0xff0000)
+// light.position.set(-1, 1, 1)
+
+// scene.add(light)
+
+        //mtl文件加载器
+
+        var mtlLoader = new THREE.MTLLoader();
+        //你的模型材质文件的目录地方路径
+        mtlLoader.setPath('UI图/');
+        mtlLoader.load('受电柜.mtl', function(materials) {
+        materials.preload();
+        var objLoader = new THREE.OBJLoader();
+        objLoader.setMaterials(materials);
+        objLoader.setPath('UI图/');
+        objLoader.load('受电柜.obj', function(object) {
+            object.scale.set(0.01, 0.01, 0.01);
+            scene.add(object);
+        });
+
+    });
+         
+        var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+ 
+        var container=document.getElementById('onGeometry').appendChild(renderer.domElement);
+ 
+        var orbit = new THREE.OrbitControls( camera, container );
+            orbit.addEventListener( 'change', render );
+         
+        function render() {
+            requestAnimationFrame(render);
+            // cube.rotation.x += 0.1;
+            // cube.rotation.y += 0.1;
+            renderer.render(scene, camera);
+        }
+        render();
+ 
+    </script>
+</body>
+</html>

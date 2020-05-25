@@ -1,0 +1,42 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl color
+Kd 0.7529412 0.7529412 0.7529412
+Ks 0.5 0.5 0.5
+illum 2
+Ns 99.90109
+
+newmtl clear_glass
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
+Ns 100
+
+newmtl green
+Kd 0 0.4705882 0.01568628
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl matte_rubber
+Kd 0.2980392 0.2980392 0.2980392
+Ks 0.5 0.5 0.5
+illum 2
+Ns 1.545079
+
+newmtl yellow
+Kd 0.9529412 0.945098 0
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl red
+Kd 0.7529412 0 0
+Ks 0.5 0.5 0.5
+illum 2
+
+newmtl white_led
+Kd 1 1 1
+Ks 0.5 0.5 0.5
+illum 2
