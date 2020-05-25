@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+         <!--引入three.js三维引擎-->
+  <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>
+  <!-- 引入支持控件支持鼠标左中右键操作和键盘方向键操作的js -->
+  <script src="http://www.yanhuangxueyuan.com/threejs/examples/js/controls/OrbitControls.js"></script>
+        
+    </head>
+    <body>
+    <script  type="text/javascript" >
+        // 老三样 场景scene，相机camera，渲染器render
+        var scene=new THREE.Scene();
+        // 相机
+        var camera = new THREE.PerspectiveCamera(45,1,1,1000);
+        camera.position.set(0,0,100);
+        camera.lookAt(new THREE.Vector3(0,0,0)); 
+        // 渲染器
+        var renderer=new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth,window.innerHeight);
+
+
+        //显示在窗体
+        document.body.appendChild(renderer.domElement);       
+
+
+        //定义材质THREE.LineBasicMaterial . MeshBasicMaterial...都可以
+        var material = new THREE.LineBasicMaterial({color:0x0000ff});
+        // 空几何体，里面没有点的信息,不想BoxGeometry已经有一系列点，组成方形了。
+        var geometry = new THREE.Geometry();
+        var geometry1 = new THREE.Geometry();
+        // 给空白几何体添加点信息，这里写3个点，geometry会把这些点自动组合成线，面。
+        geometry.vertices.push(new THREE.Vector3(-40,30,0));
+        geometry.vertices.push(new THREE.Vector3(10,30,0));
+        geometry.vertices.push(new THREE.Vector3(20,30,0));
+        geometry.vertices.push(new THREE.Vector3(35,30,0));
+        geometry.vertices.push(new THREE.Vector3(35,10,0));
+        geometry.vertices.push(new THREE.Vector3(38,10,0));
+        geometry.vertices.push(new THREE.Vector3(38,-25,0));
+        geometry.vertices.push(new THREE.Vector3(35,-25,0));
+        geometry.vertices.push(new THREE.Vector3(35,-35,0));
+        geometry.vertices.push(new THREE.Vector3(-35,-35,0));
+        geometry.vertices.push(new THREE.Vector3(-35,-5,0));
+        geometry.vertices.push(new THREE.Vector3(0,-5,0));
+        geometry.vertices.push(new THREE.Vector3(0,0,0));
+        geometry.vertices.push(new THREE.Vector3(5,0,0));
+        geometry.vertices.push(new THREE.Vector3(5,-5,0));
+        geometry.vertices.push(new THREE.Vector3(15,-5,0));
+        geometry.vertices.push(new THREE.Vector3(15,10,0));
+        geometry.vertices.push(new THREE.Vector3(-2,10,0));
+        geometry.vertices.push(new THREE.Vector3(-2,2,0));
+        geometry.vertices.push(new THREE.Vector3(-25,2,0));
+        geometry.vertices.push(new THREE.Vector3(-25,12,0));
+        geometry.vertices.push(new THREE.Vector3(-40,12,0));
+
+
+
+
+
+
+
+
+
+
+
+        geometry1.vertices.push(new THREE.Vector3(-40,25,0));
+        geometry1.vertices.push(new THREE.Vector3(10,25,0));
+        geometry1.vertices.push(new THREE.Vector3(20,25,0));
+        geometry1.vertices.push(new THREE.Vector3(33,25,0));
+        geometry1.vertices.push(new THREE.Vector3(33,10,0));
+        geometry1.vertices.push(new THREE.Vector3(30,10,0));
+        geometry1.vertices.push(new THREE.Vector3(30,-25,0));
+        geometry1.vertices.push(new THREE.Vector3(33,-25,0));
+        geometry1.vertices.push(new THREE.Vector3(33,-30,0));
+        geometry1.vertices.push(new THREE.Vector3(-33,-30,0));
+        geometry1.vertices.push(new THREE.Vector3(-33,-10,0));
+        geometry1.vertices.push(new THREE.Vector3(0,-10,0));
+        geometry1.vertices.push(new THREE.Vector3(0,-15,0));
+        geometry1.vertices.push(new THREE.Vector3(5,-15,0));
+        geometry1.vertices.push(new THREE.Vector3(5,-10,0));
+        geometry1.vertices.push(new THREE.Vector3(17,-10,0));
+        geometry1.vertices.push(new THREE.Vector3(17,14,0));
+        geometry1.vertices.push(new THREE.Vector3(-2,14,0));
+        geometry1.vertices.push(new THREE.Vector3(-2,22,0));
+        geometry1.vertices.push(new THREE.Vector3(-25,22,0));
+        geometry1.vertices.push(new THREE.Vector3(-25,13,0));
+        geometry1.vertices.push(new THREE.Vector3(-40,13,0));
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        //线构造
+        var line=new THREE.Line(geometry,material);
+        var line1=new THREE.Line(geometry1,material);
+
+        // 加入到场景中
+        scene.add(line);  
+        scene.add(line1);                  
+                
+        // 渲染
+        renderer.render(scene,camera);        
+        
+    </script>
+    </body>
+</html>

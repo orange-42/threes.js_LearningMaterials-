@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://www.yanhuangxueyuan.com/versions/threejsR92/build/three.js"></script>
+</head>
+<body>
+    <canvas></canvas>
+</body>
+<script>
+    /**
+ * 创建一个canvas对象，并绘制一些轮廓
+ */
+var canvas = document.createElement("canvas");
+// 上面canvas代码省略
+c.fillText("郭隆邦_技术博客", 0, 0);
+
+// canvas画布对象作为CanvasTexture的参数重建一个纹理对象
+// canvas画布可以理解为一张图片
+var texture = new THREE.CanvasTexture(canvas);
+//打印纹理对象的image属性
+// console.log(texture.image);
+//矩形平面
+var geometry = new THREE.PlaneGeometry(128, 32);
+
+var material = new THREE.MeshPhongMaterial({
+  map: texture, // 设置纹理贴图
+});
+// 创建一个矩形平面网模型，Canvas画布作为矩形网格模型的纹理贴图
+var mesh = new THREE.Mesh(geometry, material);
+</script>
+</html>
